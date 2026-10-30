@@ -1,0 +1,23 @@
+type Query {
+    transactions(accountId: ID): [Transaction!]!
+    transaction(id: ID!): Transaction!
+}
+
+type Mutation {
+    createTransaction(sourceAccountId: ID!, destinationAccountId: ID!, amount: Float!, currency: String!): Transaction!
+}
+
+type Transaction {
+    id: ID!
+    sourceAccountId: ID!
+    destinationAccountId: ID!
+    amount: Float!
+    currency: String!
+    createdAt: String!
+    status: TransactionStatus!
+}
+
+enum TransactionStatus {
+    COMPLETED
+    FAILED
+}

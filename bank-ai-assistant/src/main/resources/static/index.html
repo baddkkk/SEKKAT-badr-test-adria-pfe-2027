@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f7f5">
+    <title>Bank AI Assistant</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<main class="app">
+    <aside class="sidebar">
+        <a class="brand" href="/" aria-label="Bank home">
+            <span class="brand-mark">B</span>
+            <span>bank<span class="brand-light">wise</span></span>
+        </a>
+        <div class="side-label">YOUR BANKING</div>
+        <a class="nav-link" href="#"><span aria-hidden="true">▦</span> Overview</a>
+        <a class="nav-link" href="#"><span aria-hidden="true">◷</span> Transactions</a>
+        <a class="nav-link active" href="/"><span aria-hidden="true">✦</span> AI assistant</a>
+        <div class="side-bottom">
+            <div class="secure-mark">✓</div>
+            <div><strong>Secure by design</strong><small>Never share your PIN or password.</small></div>
+        </div>
+    </aside>
+
+    <section class="main-panel">
+        <header class="topbar">
+            <div class="breadcrumb">Banking <span>/</span> AI assistant</div>
+            <div class="profile"><span class="online-dot"></span> Banking assistant <span class="avatar">B</span></div>
+        </header>
+
+        <section class="chat-shell" aria-label="Bank AI assistant chat">
+            <div class="chat-heading">
+                <div class="assistant-icon">✦</div>
+                <div>
+                    <h1>Your banking, made simpler.</h1>
+                    <p>Ask me about your accounts or transactions. I’m here to help.</p>
+                </div>
+            </div>
+
+            <div class="conversation" id="conversation" aria-live="polite">
+                <div class="message assistant-message">
+                    <span class="message-icon">✦</span>
+                    <div class="message-content">
+                        <div class="message-meta">BANKWISE AI <span>JUST NOW</span></div>
+                        <p>Hello! I can help you check accounts and transactions, or guide you through a banking operation. What would you like to do?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="suggestions" id="suggestions">
+                <button type="button" class="suggestion" data-message="Show me my accounts">◉ <span>View my accounts</span></button>
+                <button type="button" class="suggestion" data-message="Show recent transactions">↗ <span>Recent transactions</span></button>
+                <button type="button" class="suggestion" data-message="How do I transfer money?">⇄ <span>Help with a transfer</span></button>
+            </div>
+
+            <form class="composer" id="chat-form">
+                <label class="sr-only" for="message-input">Your message</label>
+                <textarea id="message-input" name="message" rows="1" maxlength="4000"
+                          placeholder="Ask anything about your banking..." required></textarea>
+                <button class="send-button" id="send-button" type="submit" aria-label="Send message">↑</button>
+            </form>
+            <p class="disclaimer"><span>♢</span> For your security, never share your password, PIN, or one-time code.</p>
+        </section>
+    </section>
+</main>
+<script src="/app.js" defer></script>
+</body>
+</html>
